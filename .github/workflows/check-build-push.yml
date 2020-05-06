@@ -23,14 +23,13 @@ jobs:
           run: go build -v .	
         - name: Test
           run: go test -v .
-        - run: ls -R
         - name: Build & Publish to Registry
           uses: wuhan005/publish-docker-action@master
           with:
             dockerfile: Dockerfile
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_PASSWORD }}
-            registry: registry.cn-hongkong.aliyuncs.com
+            registry: registry.cn-hangzhou.aliyuncs.com
             repository: registry.cn-hangzhou.aliyuncs.com/oyd/blog
             tag_format: "%YYYY%_%MM%_%DD%_%H%%m%%s%"
             auto_tag: true
