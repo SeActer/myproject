@@ -1,6 +1,4 @@
 name: Build & Deploy
-env:
-    GITHUB_WORKSPACE:  /home/runner/go/src
 on:
     push:
         branches: [ master ]
@@ -22,6 +20,8 @@ jobs:
           run: go get github.com/astaxie/beego
         - name: Check out code into the Go module directory
           uses: actions/checkout@v1
+          with:
+              path: /home/runner/go/src 
         - run: ls
         - run: pwd
         - run: unset GOROOT
