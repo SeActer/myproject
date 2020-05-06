@@ -24,6 +24,8 @@ jobs:
           run: go get github.com/astaxie/beego
         - name: Check out code into the Go module directory
           uses: actions/checkout@v1
+        - run: ls
+        - run: pwd
         - run: unset GOROOT
         - name: Get dependencies
           run: |
