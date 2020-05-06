@@ -7,8 +7,8 @@ FROM alpine:latest
 WORKDIR $GOPATH/src/blog
 
 ADD config　　　　　　  $GOPATH/src/config
-ADD blog/conf　　　　 $GOPATH/src/blog/conf
-ADD  blog/login　　　　$GOPATH/src/blog/login
+ADD myproject/conf　　　　 $GOPATH/src/myproject/conf
+ADD  myproject/myproject　　　　$GOPATH/src/myproject/myproject
 
 RUN mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
