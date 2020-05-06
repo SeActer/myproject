@@ -19,6 +19,8 @@ jobs:
             go-version: 1.12
           id: go
         - run: go version
+        - name: install beego
+          run: go get github.com/astaxie/beego
         - name: Check out code into the Go module directory
           uses: actions/checkout@v1
 #         - name: Get dependencies
