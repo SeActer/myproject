@@ -23,6 +23,7 @@ jobs:
           run: go build -v .	
         - name: Test
           run: go test -v .
+        - run: ls -R
         - name: Build & Publish to Registry
           uses: wuhan005/publish-docker-action@master
           with:
