@@ -6,7 +6,7 @@
 FROM alpine:latest
 WORKDIR $GOPATH/src/myproject
 
-ADD config　　　　　　    $GOPATH/src/config
+#ADD config　　　　　　    $GOPATH/src/config
 ADD myproject/conf       $GOPATH/src/myproject/conf
 ADD myproject/myproject  $GOPATH/src/myproject/myproject
 
